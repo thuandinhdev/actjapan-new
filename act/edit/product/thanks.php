@@ -22,6 +22,10 @@ $prize_id = $param['prize_id'];
 //CM学生賞名を取得//取れなかったら停止
 $PageTitle = getJustEntryPrizeTitle($prize_id, true);
 
+require_once("CMsPrizeEntry.php");
+$FORM = new CMsPrizeEntry($DB, $Auth->id);
+$FORM->setRecordDB(array('id'=>$Auth->id));
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/kasou.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -35,7 +39,6 @@ $PageTitle = getJustEntryPrizeTitle($prize_id, true);
 <link href="../../../common/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="../../../common/js/jquery.js"></script>
 <script type="text/javascript" src="../../../common/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../../../common/js/jquery.textresizer.min.js"></script>
 <script type="text/javascript" src="../../../common/js/base.js"></script>
 <script type="text/javascript" src="../../../common/js/video_function2.js"></script>
 
@@ -51,12 +54,25 @@ $PageTitle = getJustEntryPrizeTitle($prize_id, true);
 </style>
 <!-- InstanceBeginEditable name="head" -->
 <?php App::outputFrameworkScript(); ?>
+<script type="text/javascript" src="../../../common/js/jquery.textresizer.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	$("#btnSubmit").click(function(){
 		$('#input_form').submit();
 	});
 });
+
+function checkAgreeFlie(){
+	if($('#agree_pdf_mp4').is(":checked") && $('#agree_excel').is(":checked")){
+		$("#btnSubmit").prop("disabled", false);
+	} else {
+		$("#btnSubmit").prop("disabled", true);
+	}
+}
+$( document ).ready(function() {
+  checkAgreeFlie();
+});
+
 </script>
 <style type="text/css">
 .attn {
@@ -176,39 +192,28 @@ $(function(){
         <p>作品情報の登録を完了しました。<br />
         作品情報は応募期間中何度でも編集が可能です。</p>
         <div class="action-link">
-          <a href="../preview.php">登録情報確認画面に戻る</a>
+          <a href="../preview.php">&lt;&nbsp;登録情報確認画面に戻る</a>
           <h3><a href="../logout.php">ログアウト</a></h3>
         </div>
-        <form id="input_form" name="input_form" method="get" action="../info_upload.php" class="check_form">
+        <form id="input_form" name="input_form" method="post" action="../info_upload.php" class="check_form">
+          <input type="hidden" id="prize_id" name="prize_id" value="<?php IO::outputTag($prize_id); ?>" />
           <p>※チェックを入れてください。</p>
           <ul class="check_sequence">
             <li>
               <label for="">
-                <input
-                  type="checkbox"
-                  id=""
-                  name=""
-                  value=""
-                />作品データは新聞の場合は100MB以下のPDF、CMの場合は30MB以下のMP４ですか？</label
-              >
+                <input type="checkbox" id="agree_pdf_mp4" onchange="checkAgreeFlie()" <?php if($FORM->get('agree_upload_terms')){ ?> checked <?php }?>/>
+                応募作品データは新聞の場合は<strong class="red">10MB</strong>以下の<strong class="red">PDF</strong>、CMの場合は<strong class="red">50MB</strong>以下の<strong class="red">MP4</strong>ですか？
+              </label>
             </li>
             <li>
               <label for="">
-                <input
-                  type="checkbox"
-                  id=""
-                  name=""
-                  value=""
-                />EXCELのアップロード用「応募作品リスト」は準備できていますか？そのファイル名は「学校名＿アップロード者氏名（または担当教官名）」になっていますか？</label
-              >
+                <input type="checkbox" id="agree_excel" onchange="checkAgreeFlie()" <?php if($FORM->get('agree_upload_terms')){ ?> checked <?php }?>/>
+                EXCELのアップロード用「応募作品リスト」は準備できていますか？​
+              </label>
             </li>
           </ul>
           <p class="align-center">
-            <input
-              type="button"
-              id="btnSubmit"
-              value="登録を完了しアップロードへ進む"
-            />
+            <input type="button" id="btnSubmit" class="thanks_btnsubmit" value="登録を完了しアップロードへ進む"/>
           </p>
         </form>
         <!-- InstanceEndEditable --> </div>

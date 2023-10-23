@@ -407,7 +407,8 @@ table .inner, table .inner th {
                 </form></td>
             </tr>
             <?php } ?>
-          </table>         
+          </table>    
+          <?php if($FORM->get('agree_upload_terms')){ ?>     
           <table class="input">
             <tbody>
               <tr><th class="leftth">作品情報登録が完了し、作品データのアップロードが可能になりました。</th></tr>              
@@ -420,27 +421,23 @@ table .inner, table .inner th {
                     >
                   </p>
                   <p>
-                    <a href="https://www.ad-c.or.jp/campaign/cm/recruit_oubo.html" target="_blank"
-                      >https://www.ad-c.or.jp/campaign/cm/recruit_oubo.html</a
-                    >
+                    <a href="https://a5.adstream.com/uploader?type=assets&isS3=true" target="_blank">https://a5.adstream.com/uploader?type=assets&isS3=true</a>
                   </p>
                   <ul class="account">
                     <li>
-                      <span class="txt">ログインID</span
-                      ><span class="value">XXXXXXXXX</span>
+                      <span class="txt">ログインID:</span
+                      ><span class="value">ac-prize@adbank.me</span>
                     </li>
                     <li>
-                      <span class="txt">パスワード</span
-                      ><span class="value">XXXXXXXXX</span>
+                      <span class="txt">パスワード:</span
+                      ><span class="value">Acs226554ccx​</span>
                     </li>
                   </ul>
                   <div class="name-file">
-                    <span class="label">　応募作品ファイル名　　</span>
+                    <span class="label">応募作品ファイル名</span>
                     <div class="file-code">
                       <div class="copy-code">
-                        <span class="name-code" id="copyText"
-                          >20ーA000ーT00＿広告太郎　</span
-                        >
+                        <span class="name-code" id="copyText"><?php $FORM->output('user_id'); ?>_<?php print(preg_replace('/\s+/', '', $FORM->get('name_sei').$FORM->get('name_mei'))); ?></span>
                         <button id="copyButton" onclick="withCopy();">
                           Copy
                         </button>
@@ -456,6 +453,7 @@ table .inner, table .inner th {
               </tr>
             </tbody>
           </table> 
+          <?php } ?>
           <h3><a href="logout.php">ログアウト</a></h3>
           <!-- InstanceEndEditable --> </div>
       </div>

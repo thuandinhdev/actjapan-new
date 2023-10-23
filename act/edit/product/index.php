@@ -271,10 +271,10 @@ function getIntentionLength(){
           <tr>
             <th>スタッフ<span class="required">【必須】</span>
               <?php //print "<br />".$FORM->get('staff_count')."<br />"; ?></th>
-            <td><p class="attn">代表者以外の全スタッフを入力してください。<br />                
+            <td><p class="attn">代表者を含めた全スタッフを入力してください。<br />                
                 ※漢字表記に誤りがないよう、事前に確認の上、入力してください。<br />
                 フリガナも必ず入力してください。</p>
-              <table class="inner">
+              <table class="inner table-staff">
                 <?php for ($i=1; $i<=$FORM->staffPersons;$i++){
 			$staff_id = 'staff_id'.sprintf("%02d", $i);//スタッフID
 			$staff_delete = 'staff_delete'.sprintf("%02d", $i);//スタッフレコード削除
@@ -286,10 +286,12 @@ function getIntentionLength(){
                 <tr>
                   <th class="sNum"><?php IO::output($i); ?>
                     ：
+                    <?php if ($i==1){ ?>
                     <br/>
-                    <span class="required">（制作代表者）</span>
+                    <span class="required">（代表者）</span>
+                    <?php } ?>
                     <input type="hidden" id="<?php IO::output($staff_id); ?>" name="<?php IO::output($staff_id); ?>" value="<?php $FORM->outputTag($staff_id); ?>" />
-                    <?php if($FORM->get($staff_id)){ ?>
+                    <?php if($FORM->get($staff_id) && $i > 1){ ?>
                     <ul class="check_sequence staff_delete01_input_area">
                       <?php foreach ($FORM->getLabel($staff_delete) as $key => $val) { ?>
                       <li>
@@ -332,7 +334,7 @@ function getIntentionLength(){
           </div>
           <?php } ?>
           <div id="stafftable<?php IO::outputTag($stafftable); ?>">
-          <table class="inner">
+          <table class="inner table-staff">
             <?php } ?>
             <?php } ?>
             <?php } ?>

@@ -2777,10 +2777,12 @@ div#ac_archive h4 {
 .mainpic>a[href="campaign/support/support_04.html"]+ul>li.campaign_name{padding-bottom:0}
 
 /*20231210*/
-div.form_error{
+th.sStr div.form_error{
   max-width: 100px;
   white-space: pre-wrap;
   line-height: 1.1;
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 .action-link {
   display: flex;
@@ -2808,6 +2810,9 @@ div.form_error{
   justify-content: center;
   max-width: 86%;
   margin: 10px auto 0;
+}
+table.input .name-file{
+  max-width: 100%;
 }
 .name-file .label{
   max-width: 30%;
@@ -2848,4 +2853,40 @@ div.form_error{
 }
 .file-code .note{
   text-align: left;
+  color: red;
+}
+.check_form .check_sequence li{
+  white-space: normal!important;
+  padding-right: 0!important;
+}
+.check_form .check_sequence li label{
+  font-size: 0.875rem;
+}
+.check_form .check_sequence li .red{
+  color: red;
+}
+form table.input th{
+  max-width: 173px;
+}
+.open-msg{
+  font-size: 0.875rem;
+}
+.thanks_btnsubmit{
+  padding: 0.5rem 0.9375rem;
+  background-color: #5691c0;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.thanks_btnsubmit:disabled{
+  opacity:0.6;
+  cursor: default;
+}
+form table.input th.sStr input[type='text']{
+  min-width: 70px;
+}
+.table-staff tbody tr th.sNum{
+  width: 75px;
 }
