@@ -233,14 +233,14 @@ $FORM->updateAgreeUploadTerms();
                 <strong>作品アップロードアクセス先（クリックで別ウィンドウが開きます）</strong>
               </p>
               <p class="open-msg">
-              <a href="https://a5.adstream.com/uploader?type=assets&isS3=true​" target="_blank">https://a5.adstream.com/uploader?type=assets&isS3=true​</a>
+              <a href="https://a5.adstream.com/uploader?type=assets&isS3=true" target="_blank">https://a5.adstream.com/uploader?type=assets&isS3=true</a>
               </p>
               <ul class="account">
                 <li>
-                  <span class="txt">ログインID:</span><span class="value">ac-prize@adbank.me​</span>
+                  <span class="txt">ログインID:</span><span class="value">ac-prize@adbank.me</span>
                 </li>
                 <li>
-                  <span class="txt">パスワード:</span><span class="value">Acs226554ccx​</span>
+                  <span class="txt">パスワード:</span><span class="value">Acs226554ccx</span>
                 </li>
               </ul>
               <div class="name-file">

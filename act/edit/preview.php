@@ -425,12 +425,10 @@ table .inner, table .inner th {
                   </p>
                   <ul class="account">
                     <li>
-                      <span class="txt">ログインID:</span
-                      ><span class="value">ac-prize@adbank.me</span>
+                      <span class="txt">ログインID:</span><span class="value">ac-prize@adbank.me</span>
                     </li>
                     <li>
-                      <span class="txt">パスワード:</span
-                      ><span class="value">Acs226554ccx​</span>
+                      <span class="txt">パスワード:</span><span class="value">Acs226554ccx</span>
                     </li>
                   </ul>
                   <div class="name-file">

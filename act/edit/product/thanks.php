@@ -197,7 +197,7 @@ $( document ).ready(function() {
         </div>
         <form id="input_form" name="input_form" method="post" action="../info_upload.php" class="check_form">
           <input type="hidden" id="prize_id" name="prize_id" value="<?php IO::outputTag($prize_id); ?>" />
-          <p>※チェックを入れてください。</p>
+          <p>※必ず作品情報の内容を確定させてからチェックを入れてください。</p>
           <ul class="check_sequence">
             <li>
               <label for="">

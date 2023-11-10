@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- InstanceBegin template="/Templates/kasou.dwt" codeOutsideHTMLIsLocked="false" -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta
+      name="GENERATOR"
+      content="JustSystems Homepage Builder Version 21.0.1.0 for Windows"
+    />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>個人会員リスト|会員一覧|ACジャパン</title>
+    <!-- InstanceEndEditable -->
+    <link
+      href="../common/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <script type="text/javascript" src="../common/js/jquery.js"></script>
+    <script type="text/javascript" src="../common/js/jquery.cookie.js"></script>
+    <script
+      type="text/javascript"
+      src="../common/js/jquery.textresizer.min.js"
+    ></script>
+    <script type="text/javascript" src="../common/js/base.js"></script>
+    <script
+      type="text/javascript"
+      src="../common/js/video_function2.js"
+    ></script>
+
+    <!-- Video API -->
+    <script
+      type="text/javascript"
+      src="../common/js/api/html5media.min.js"
+    ></script>
+    <!--[if lt IE 9
+      ]><script src="../../common/js/api/html5shiv.js"></script
+    ><![endif]-->
+
+    <style type="text/css">
+      <!--
+      #gnav_member > a {
+          background-position: 0 bottom;
+      }
+      -->
+    </style>
+    <!-- InstanceBeginEditable name="head" -->
+    <style type="text/css">
+      <!--
+      .last {
+          width: 120px !important;
+      }
+      #supportB {
+          margin-top: 10px;
+      }
+      -->
+    </style>
+    <!-- InstanceEndEditable -->
+    <!-- InstanceParam name="breadclam" type="boolean" value="true" -->
+    <!-- InstanceParam name="gnav" type="text" value="member" -->
+    <!-- InstanceParam name="lnav" type="text" value="support_list" -->
+  </head>
+  <body>
+    <div id="site_header">
+      <div id="innner">
+        <div id="header_right">
+          <div id="site-search">
+            <form class="gsc-search-box" method="get" action="../result.html">
+              <input
+                type="text"
+                name="q"
+                id="keywords"
+                value=""
+                placeholder="サイト内検索"
+              />
+              <input type="submit" id="search-btn" value="検索" />
+            </form>
+          </div>
+          <div id="chg-font-size" class="cf">
+            <div id="font-size">
+              <img
+                src="../common/images/font-size.gif"
+                width="58"
+                height="12"
+                alt=""
+              />
+            </div>
+            <ul id="chg_size">
+              <li id="btn_s"><a href="javascript:;">標準</a></li>
+              <li id="btn_b"><a href="javascript:;">大</a></li>
+            </ul>
+          </div>
+          <div id="logo">
+            <h1>
+              <a href="../index.html"
+                ><img
+                  src="../common/images/logo_header.png"
+                  width="146"
+                  height="45"
+                  alt="公益社団法人ACジャパン"
+              /></a>
+            </h1>
+          </div>
+          <a
+            href="../about_ac/english/about_ac.html"
+            id="link_english"
+            target="_blank"
+            >english</a
+          >
+          <a href="../contact.html" id="link_contact">お問い合わせ</a>
+          <ul id="gnav">
+            <li id="gnav_about_ac">
+              <a href="../about_ac/index.html">ACジャパンの活動</a>
+              <ul class="submenu">
+                <li>
+                  <a href="../about_ac/greeting.html">理事長ごあいさつ</a>
+                </li>
+                <li><a href="../about_ac/index.html">ACジャパンとは</a></li>
+                <li>
+                  <a href="../about_ac/philosophy.html">ACジャパンの歴史</a>
+                </li>
+                <li>
+                  <a href="../about_ac/action.html">ACジャパンの活動のしくみ</a>
+                </li>
+                <li>
+                  <a href="../about_ac/mebae.html">ACマスコットめばえちゃん</a>
+                </li>
+              </ul>
+            </li>
+            <li id="gnav_outline">
+              <a href="../outline/index.html">団体概要</a>
+              <ul class="submenu">
+                <li><a href="../outline/index.html">団体概要</a></li>
+                <li><a href="../outline/contract.html">定款</a></li>
+                <li><a href="../outline/history.html">沿革</a></li>
+                <li><a href="../outline/organi.html">組織図</a></li>
+                <li><a href="../outline/board.html">役員一覧</a></li>
+                <li><a href="../outline/business.html">公開資料</a></li>
+                <li>
+                  <a href="../outline/hojin.html">公益社団法人の該当性</a>
+                </li>
+                <li>
+                  <a href="../outline/p_policy.html">特定個人情報の基本方針</a>
+                </li>
+                <li><a href="../outline/link.html">関係団体リンク</a></li>
+              </ul>
+            </li>
+            <li id="gnav_campaign">
+              <a href="../campaign/index.html">広告キャンペーン</a>
+              <ul class="submenu" id="cp">
+                <li class="odd">
+                  <a href="../campaign/index.html">広告キャンペーン概要</a>
+                </li>
+                <li>
+                  <a href="../campaign/flow.html">キャンペーン実施の流れ</a>
+                </li>
+                <li class="odd">
+                  <a href="../campaign/rule.html">支援キャンペーン実施諸規則</a>
+                </li>
+                <li class="trouble">
+                  <a href="../campaign/production.html"
+                    >プレゼンテーション<br />
+                    参加広告会社</a
+                  >
+                </li>
+                <li class="odd">
+                  <a href="../campaign/self_theme.html"
+                    >全国キャンペーンテーマ</a
+                  >
+                </li>
+                <li>
+                  <a href="../campaign/self_all/index.html">全国キャンペーン</a>
+                </li>
+                <li class="odd"><a href="">広報キャンペーン</a></li>
+                <li>
+                  <a href="../campaign/self_area/index.html"
+                    >地域キャンペーン</a
+                  >
+                </li>
+                <li class="odd">
+                  <a href="../campaign/support/index.html">支援キャンペーン</a>
+                </li>
+                <li class="trouble">
+                  <a href="../campaign/nhk/index.html"
+                    >ＡＣジャパン・NHK<br />
+                    共同キャンペーン</a
+                  >
+                </li>
+                <li class="odd">
+                  <a href="../campaign/cm/index.html">ＡＣジャパン広告学生賞</a>
+                </li>
+                <li><a href="">臨時キャンペーン</a></li>
+                <li class="trouble">
+                  <a href="../campaign/search.php"
+                    >ＡＣジャパン<br />
+                    広告作品アーカイブ</a
+                  >
+                </li>
+                <li>
+                  <a href="../campaign/view/index.html">広告賞受賞作品一覧</a>
+                </li>
+                <li>
+                  <a href="../campaign/rental.html">広告作品の貸出について</a>
+                </li>
+                <li>
+                  <a href="../campaign/secondary_use.html"
+                    >広告作品の二次使用について</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li id="gnav_join">
+              <a href="../join/index.html">入会のご案内</a>
+              <ul class="submenu">
+                <li><a href="../join/index.html">入会のご案内</a></li>
+                <li><a href="../join/contact.html">資料請求</a></li>
+              </ul>
+            </li>
+            <li id="gnav_member">
+              <a href="index.html">会員一覧</a>
+              <ul class="submenu">
+                <li><a href="index.html">正会員リスト</a></li>
+                <li><a href="support_list.html">個人会員リスト</a></li>
+              </ul>
+            </li>
+            <li id="gnav_comment">
+              <a href="../request/index.html">ご意見・ご要望</a>
+              <!--<ul class="submenu">
+            <li><a href="../comment/index.html">正会員リスト</a></li>
+            <li><a href="../comment/support_list.html">個人会員リスト</a></li>
+          </ul>-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="header_line"></div>
+    </div>
+    <div id="container">
+      <div id="wapper" class="cf">
+        <div id="contents_area" class="cf">
+          <div id="g_title">
+            <!-- InstanceBeginEditable name="g_title" -->
+            <h1>個人会員リスト</h1>
+            <!-- InstanceEndEditable -->
+          </div>
+          <div id="maincontent" class="cf">
+            <div id="maincontent-innner" class="cf">
+              <!-- InstanceBeginEditable name="maincontent-innnre" -->
+              <ul class="suport_list cf">
+                <li>阿部&emsp;芳巳</li>
+                <li>天海&emsp;幹子</li>
+                <li>磯田&emsp;浩</li>
+                <li>岩井田&emsp;勇</li>
+                <li>岩切&emsp;省造</li>
+                <li>上杉&emsp;昭治</li>
+                <li>臼井&emsp;伸行</li>
+                <li>内田&emsp;一真</li>
+                <li>江川&emsp;建男</li>
+                <li>遠藤&emsp;貴子</li>
+                <li>岡田&emsp;光</li>
+                <li>緒方&emsp;裕美</li>
+                <li>岡登&emsp;一志</li>
+                <li>小原&emsp;博之</li>
+                <li>加藤&emsp;元</li>
+                <li>加藤&emsp;慎一</li>
+                <li>狩野&emsp;雄司</li>
+                <li>川原&emsp;直毅</li>
+                <li>川道&emsp;宏明</li>
+                <li>北&emsp;政江</li>
+                <li>日下&emsp;啓二</li>
+                <li>草川&emsp;衛</li>
+                <li>國光&emsp;めぐみ</li>
+                <li>光明院&emsp;利光</li>
+                <li>小松&emsp;正幸</li>
+                <li>小松田&emsp;泰央</li>
+                <li>小山&emsp;弘子</li>
+                <li>斉藤&emsp;雅裕</li>
+                <li>佐川&emsp;健太郎</li>
+                <li>相樂&emsp;姫花</li>
+                <li>櫻野&emsp;義郎</li>
+                <li>櫻庭&emsp;勝彦</li>
+                <li>佐藤&emsp;真一</li>
+                <li>砂山&emsp;陽亮</li>
+                <li>Germain&nbsp;Mesureur</li>
+                <li>杉山&emsp;喜光</li>
+                <li>高橋&emsp;嘉津子</li>
+                <li>高橋&emsp;泰</li>
+                <li>高松&emsp;増美</li>
+                <li>武井&emsp;泰整</li>
+                <li>田坂&emsp;英樹</li>
+                <li>田澤&emsp;誠</li>
+                <li>蔦&emsp;直宏</li>
+                <li>塚田&emsp;政道</li>
+                <li>辻岳&emsp;夕紀恵</li>
+                <li>西&emsp;晃司</li>
+                <li>萩原&emsp;豊章</li>
+                <li>花野&emsp;麻紀</li>
+                <li>菱谷&emsp;誠人</li>
+                <li>福島&emsp;幾久男</li>
+                <li>二木&emsp;統希</li>
+                <li>木綿&emsp;健二</li>
+                <li>山田&emsp;欣吾</li>
+                <li>山根&emsp;広子</li>
+                <li>山本&emsp;孝司</li>
+                <li>山本&emsp;寿子</li>
+                <li>吉本&emsp;攻</li>
+                <li>渡辺&emsp;修哉</li>
+                <li class="last">その他匿名希望者</li>
+              </ul>
+              <div id="supportB">
+                <p>2023年11月1日現在</p>
+              </div>
+              <!-- InstanceEndEditable -->
+            </div>
+          </div>
+          <div class="rightmenu">
+            <ul class="localnavi">
+              <li class=""><a href="index.html">正会員リスト</a></li>
+              <li class="active">
+                <a href="support_list.html">個人会員リスト</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="cf">
+      <div id="footerinnner">
+        <div id="footer-top">
+          <ul id="footerlink">
+            <li class="footernav">
+              <a href="../about.html">本サイトについて</a>
+            </li>
+            <li class="footernav">
+              <a href="../privacy.html">プライバシーポリシー</a>
+            </li>
+            <li class="footernav">
+              <a href="../sitemap.html">サイトマップ</a>
+            </li>
+            <li class="footernav">
+              <a href="../about.html#environ">推奨環境について</a>
+            </li>
+          </ul>
+          <div id="pagetop">
+            <a href="#logo"
+              ><img
+                src="../common/images/pageup.gif"
+                width="220"
+                height="32"
+                alt="page up"
+            /></a>
+          </div>
+        </div>
+        <p id="copyright">
+          Copyright&copy;2014 Advertising Council Japan. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <!-- InstanceBeginEditable name="Page Js" -->
+    <!-- Page JavaScript-->
+    <!-- InstanceEndEditable -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-51402180-1", "ad-c.or.jp");
+      ga("send", "pageview");
+    </script>
+  </body>
+  <!-- InstanceEnd -->
+</html>
